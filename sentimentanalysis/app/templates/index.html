@@ -1,0 +1,70 @@
+{% extends 'static/static.html' %}
+{% load static %}
+
+{% block links %}
+<style>
+    /* CSS styles here */
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+
+    body {
+        /* Set the background image */
+        background-image: url("{% static 'imgs/background.gif' %}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white; /* Set text color to white */
+        overflow: hidden; /* Prevent scrolling */
+    }
+
+    .header-background {
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }   
+
+    .logo {
+        position: absolute;
+        top: -50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    }
+
+    .hybrid-display {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div style="transform: translate(42%, 50%); color: white;">
+    <h1>Sentiment Analysis</h1>
+</div>
+<div class="w3-display-container w3-content header-background" style="max-width:900px; transform: translate(0%, 43%)">
+    <div class="w3-container w3-padding-16" style="background-color: rgba(255, 255, 255, 0.5);">
+        <form action="" method="post">
+            {% csrf_token %}
+            <div style="display: flex; justify-content: center;">
+                <label><i class="fas fa-brain"></i> Enter Text: </label>
+            </div>   
+            <div style="display: flex; justify-content: center;">
+                <textarea rows="7" cols="50" placeholder="Text to be analyzed..." style="resize: none;"></textarea>
+            </div>
+            <br>
+            <div style="display: flex; justify-content: center;">
+                <button class="w3-button w3-blue" type="submit"><i class="fa fa-search w3-margin-right"></i> Search</button>
+            </div>
+            {% if results %}
+            <br>
+            <div style="display: flex; justify-content: center;">
+                <label><i class="fa fa-money"></i> Monthly Minimum</label>
+            </div>
+            {% endif %}   
+        </form>
+    </div>
+</div>
+{% endblock %}
