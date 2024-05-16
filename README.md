@@ -6,6 +6,7 @@ A web application built using the Django framework that allows users to analyze 
 - [What is Django?](#Django)
 - [What is Artificial Inteligence (AI)?](#AI)
 - [What is Natural Language Processing (NLP)?](#NLP)
+- [What is Sentiment Analysis?](#Sentiment-Analysis)
 - [Application](#Description)
 
 ## Django
@@ -80,5 +81,34 @@ Text classification is the task of categorizing text documents into predefined c
 #### Language Modeling
 
 Language modeling involves building statistical or deep learning models to predict the probability of a sequence of words or characters in a language. It is the foundation for many NLP tasks, including machine translation, speech recognition, and text generation.
+
+## Sentiment-Analysis
+
+Sentiment analysis, also known as opinion mining, is the process of analyzing text to determine the sentiment polarity, which can be positive, negative, or neutral. It involves classifying text data based on the expressed sentiment or emotion, enabling us to understand the opinions, attitudes, and emotions of individuals or groups.
+
+### Key Components of Sentiment Analysis
+
+#### Text Preprocessing
+
+Text preprocessing is a crucial step in sentiment analysis, involving tasks such as tokenization, removing stopwords, stemming, and lemmatization. Preprocessing helps clean and standardize text data before sentiment analysis algorithms can be applied.
+
+#### Lexicon-Based Approaches
+
+Lexicon-based sentiment analysis relies on predefined sentiment lexicons or dictionaries containing words annotated with their sentiment polarity. These approaches assign sentiment scores to text based on the presence of positive, negative, or neutral words in the lexicon.
+
+#### Machine Learning Models
+
+Machine learning models, such as supervised classifiers (e.g., Support Vector Machines, Naive Bayes, Logistic Regression) and deep learning architectures (e.g., Recurrent Neural Networks, Convolutional Neural Networks), are commonly used for sentiment analysis. These models learn to classify text based on labeled training data and can capture complex patterns in text sentiment.
+
+#### Fine-Tuning Pretrained Models
+
+Fine-tuning pretrained language models, such as BERT, RoBERTa, or GPT, has emerged as a powerful approach for sentiment analysis. By fine-tuning on domain-specific or task-specific datasets, these models can achieve state-of-the-art performance on sentiment analysis tasks.
+
+### Applications of Sentiment Analysis
+
+- **Social Media Monitoring**: Analyzing sentiment on social media platforms to understand public opinion, customer feedback, and brand sentiment.
+- **Product Reviews**: Evaluating sentiment in product reviews to identify customer preferences, satisfaction levels, and areas for improvement.
+- **Market Research**: Analyzing sentiment in market data, news articles, and customer surveys to gauge market sentiment and trends.
+- **Customer Support**: Automatically categorizing customer inquiries or feedback based on sentiment to prioritize responses and improve customer service.
 
 ## Description
