@@ -1,1 +1,1 @@
-# Sentiment-Analysis-Django
+# Sentiment-Analysis-App
