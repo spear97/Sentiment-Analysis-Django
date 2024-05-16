@@ -41,27 +41,41 @@
 {% endblock %}
 
 {% block content %}
-<div style="transform: translate(42%, 50%); color: white;">
-    <h1>Sentiment Analysis</h1>
+<div style="transform: translate(32%, 50%); color: white;">
+    <h1 style='font-size:64px;'>Sentiment Analysis</h1>
 </div>
-<div class="w3-display-container w3-content header-background" style="max-width:900px; transform: translate(0%, 43%)">
+<div class="w3-display-container w3-content header-background" style="max-width:900px; transform: translate(0%, 25%)">
     <div class="w3-container w3-padding-16" style="background-color: rgba(255, 255, 255, 0.5);">
-        <form action="" method="post">
+        <form action="{% url 'sentiment_analysis' %}" method="post">
             {% csrf_token %}
             <div style="display: flex; justify-content: center;">
-                <label><i class="fas fa-brain"></i> Enter Text: </label>
+                <label><i class="fas fa-brain" style='font-size:24px;'></i> Enter Text: </label>
             </div>   
             <div style="display: flex; justify-content: center;">
-                <textarea rows="7" cols="50" placeholder="Text to be analyzed..." style="resize: none;"></textarea>
+                <textarea rows="7" cols="50" placeholder="Text to be analyzed..." style="resize: none;" name="txt"></textarea>
             </div>
             <br>
             <div style="display: flex; justify-content: center;">
-                <button class="w3-button w3-blue" type="submit"><i class="fa fa-search w3-margin-right"></i> Search</button>
+                <button class="w3-button w3-light-blue" type="submit"><i class="fas fa-robot w3-margin-right"></i> Submit</button>
             </div>
-            {% if results %}
+            {% if txt%}
             <br>
             <div style="display: flex; justify-content: center;">
-                <label><i class="fa fa-money"></i> Monthly Minimum</label>
+                <b style='font-size:18px;'><u> The Result for {{txt}} is: </u><b> 
+            </diV>
+            <br>
+            {% endif %}
+            {% if neg > neu and neg > pos %}
+            <div style="display: flex; justify-content: center;">
+                <label><i class='fas fa-angry' style='font-size:24px;'></i> Negative</label>
+            </div>
+            {% elif pos > neu and pos > neg %}
+            <div style="display: flex; justify-content: center;">
+                <label><i class='fas fa-grin-alt' style='font-size:24px;'></i> Postive</label>
+            </div>
+            {% else %}
+            <div style="display: flex; justify-content: center;">
+                <label><i class='fas fa-meh' style='font-size:24px;'></i> Neutral</label>
             </div>
             {% endif %}   
         </form>
