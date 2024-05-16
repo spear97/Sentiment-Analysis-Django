@@ -57,4 +57,28 @@ Reinforcement Learning is a type of Machine Learning that involves training agen
 
 ## NLP
 
+Natural Language Processing (NLP) is a field of AI that involves the interaction between computers and human languages. It encompasses a wide range of tasks, including text processing, sentiment analysis, language translation, speech recognition, text generation, and more.
+
+### Key Components of NLP
+
+#### Text Preprocessing
+
+Text preprocessing involves cleaning and formatting raw text data to make it suitable for analysis and modeling. It includes tasks such as tokenization, stemming, lemmatization, removing stopwords, and handling special characters.
+
+#### Sentiment Analysis
+
+Sentiment analysis, also known as opinion mining, is the process of determining the sentiment or emotion expressed in a piece of text. It can be used to classify text as positive, negative, or neutral and is valuable for understanding public opinion, customer feedback, and social media sentiment.
+
+#### Named Entity Recognition (NER)
+
+Named Entity Recognition (NER) is a task in NLP that involves identifying and classifying named entities (e.g., names of people, organizations, locations, dates) mentioned in text. It is useful for extracting structured information from unstructured text data and is widely used in information retrieval, question answering, and knowledge graph construction.
+
+#### Text Classification
+
+Text classification is the task of categorizing text documents into predefined classes or categories based on their content. It is used in various applications, including spam detection, sentiment analysis, topic modeling, and document classification.
+
+#### Language Modeling
+
+Language modeling involves building statistical or deep learning models to predict the probability of a sequence of words or characters in a language. It is the foundation for many NLP tasks, including machine translation, speech recognition, and text generation.
+
 ## Description
